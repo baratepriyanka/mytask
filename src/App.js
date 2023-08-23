@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./Login";
+import Signup from "./Signup";
+import Post from "./Post";
+import Postp from "./Postp";
+import Postpp from "./Postpp";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "./Login.module.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Header />
+    <BrowserRouter>
+      
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/post" element={<Post />} />
+        <Route path="/postp" element={<Postp />} />
+        <Route path="/postpp" element={<Postpp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
